@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  grafana:
+    image: alpine-nginx-php8:1.0
+    container_name: typecho
+    ports:
+      - 30080:80
+    restart: always
+    volumes:
+      - /opt/typecho/public:/var/www/html
+
